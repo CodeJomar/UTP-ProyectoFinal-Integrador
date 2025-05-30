@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dash Flow - Control de Finanzas</title>
+
+  <!-- Icons de Google -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+
+  <!-- CSS Externo -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script defer src="./js/script.js"></script>
+</head>
+
+<body>
+
+  <div class="container-JE">
+
+    <!-- INICIO DE LA BARRA DE NAVEGACIÓN -->
+
+    <aside class="aside-JE">
+      <div class="top-JE">
+
+        <div class="logo-JE">
+          <img class="img-JE" src="./images/logo-dashboard.png" alt="logo">
+          <h2 class="h2-JE">DASH <span class="peligro-JE">FLOW</span></h2>
+        </div>
+
+        <div class="close-JE" id="close-btn-JE">
+          <span class="material-icons-sharp">close</span>
+        </div>
+
+      </div>
+
+
+      <div class="sidebar-JE">
+
+        <a href="./index.html" class="hipervinculo-JE">
+          <span class="material-icons-sharp">dashboard</span>
+          <h3 class="h3-JE">Dashboard</h3>
+        </a>
+
+        <a href="./cuenta.html" class="hipervinculo-JE">
+          <span class="material-icons-sharp">person_outline</span>
+          <h3 class="h3-JE">Cuenta</h3>
+        </a>
+
+        <a href="./productos.html" class="hipervinculo-JE">
+          <span class="material-icons-sharp">inventory</span>
+          <h3 class="h3-JE">Productos</h3>
+        </a>
+
+        <a href="./ingresos.html" class="hipervinculo-JE">
+          <span class="material-icons-sharp">insights</span>
+          <h3 class="h3-JE">Flujo de Ingresos</h3>
+        </a>
+
+        <a href="./pedidos.html" class="hipervinculo-JE active-JE">
+          <span class="material-icons-sharp">list_alt</span>
+          <h3 class="h3-JE">Pedidos</h3>
+          <span class="message-count-danger-JE">26</span>
+        </a>
+
+        <a href="./empleados.html" class="hipervinculo-JE">
+          <span class="material-icons-sharp">badge</span>
+          <h3 class="h3-JE">Empleados</h3>
+        </a>
+
+        <a href="./tiers.html" class="hipervinculo-JE">
+          <span class="material-icons-sharp">workspace_premium</span>
+          <h3 class="h3-JE">Tiers</h3>
+          <span class="message-count-success-JE">Free</span>
+        </a>
+
+        <a href="#" class="hipervinculo-JE">
+          <span class="material-icons-sharp">settings</span>
+          <h3 class="h3-JE">Configuración</h3>
+        </a>
+
+        <a href="#" class="hipervinculo-JE">
+          <span class="material-icons-sharp">logout</span>
+          <h3 class="h3-JE">Salir</h3>
+        </a>
+
+      </div>
+    </aside>
+
+    <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
+
+    <!-- INICIO DEL CONTENIDO PRINCIPAL MAIN -->
+
+    <main class="main-JE">
+      <h1 class="h1-JE">Dashboard</h1>
+
+      <div class="date-JE">
+        <input type="date">
+      </div>
+
+      <!-- INICIO DEL CONTENEDOR DE LAS TARJETAS DE ARRIBA DEL DASHBOARD -->
+
+      <div class="insights-JE">
+
+        <!-- INICIO DE LA PRIMERA TARJETA SUPERIOR DEL DASHBOARD -->
+
+        <div class="sales-JE">
+          <span class="material-icons-sharp">analytics</span>
+          <div class="middle-JE">
+            <div class="left-JE">
+              <h3 class="h3-JE">Total Sales</h3>
+              <h1 class="h1-JE">$25,024</h1>
+            </div>
+            <div class="progress-JE">
+              <svg>
+                <circle cx="38" cy="38" r="36"></circle>
+              </svg>
+              <div class="number-JE">
+                <p class="p-JE">81%</p>
+              </div>
+            </div>
+          </div>
+          <small class="small-JE text-muted-JE">Last 24 Hours</small>
+        </div>
+
+        <!-- FIN DE LA PRIMERA TARJETA SUPERIOR DEL DASHBOARD -->
+
+        <!-- INICIO DE LA SEGUNDA TARJETA SUPERIOR DEL DASHBOARD -->
+
+        <div class="expenses-JE">
+          <span class="material-icons-sharp">bar_chart</span>
+          <div class="middle-JE">
+            <div class="left-JE">
+              <h3 class="h3-JE">Total Expenses</h3>
+              <h1 class="h1-JE">$14,204</h1>
+            </div>
+            <div class="progress-JE">
+              <svg>
+                <circle cx="38" cy="38" r="36"></circle>
+              </svg>
+              <div class="number-JE">
+                <p class="p-JE">81%</p>
+              </div>
+            </div>
+          </div>
+          <small class="small-JE text-muted-JE">Last 24 Hours</small>
+        </div>
+
+        <!-- FIN DE LA SEGUNDA TARJETA SUPERIOR DEL DASHBOARD -->
+
+        <!-- INICIO DE LA TERCERA TARJETA SUPERIOR DEL DASHBOARD -->
+
+        <div class="income-JE">
+          <span class="material-icons-sharp">stacked_line_chart</span>
+          <div class="middle-JE">
+            <div class="left-JE">
+              <h3 class="h3-JE">Total Income</h3>
+              <h1 class="h1-JE">$10,084</h1>
+            </div>
+            <div class="progress-JE">
+              <svg>
+                <circle cx="38" cy="38" r="36"></circle>
+              </svg>
+              <div class="number-JE">
+                <p class="p-JE">44%</p>
+              </div>
+            </div>
+          </div>
+          <small class="small-JE text-muted-JE">Last 24 Hours</small>
+        </div>
+
+        <!-- FIN DE LA TERCERA TARJETA SUPERIOR DEL DASHBOARD -->
+      </div>
+
+      <!-- FIN DEL CONTENEDOR DE LAS TARJETAS DE ARRIBA DEL DASHBOARD -->
+
+      <!-- INICIO DE LA TABLA PRINCIPAL DEL DASHBOARD -->
+
+      <div class="recent-orders-JE">
+        <h2>Recent Orders</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre del Producto</th>
+              <th>Número del Producto</th>
+              <th>Pago</th>
+              <th>Estado</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Foldable Mini Drone</td>
+              <td>85631</td>
+              <td>Debe</td>
+              <td class="advertencia-JE">Pendiente</td>
+              <td class="primario-JE">Detalles</td>
+            </tr>
+            <tr>
+              <td>Foldable Mini Drone</td>
+              <td>85631</td>
+              <td>Debe</td>
+              <td class="advertencia-JE">Pendiente</td>
+              <td class="primario-JE">Detalles</td>
+            </tr>
+            <tr>
+              <td>Foldable Mini Drone</td>
+              <td>85631</td>
+              <td>Debe</td>
+              <td class="advertencia-JE">Pendiente</td>
+              <td class="primario-JE">Detalles</td>
+            </tr>
+            <tr>
+              <td>Foldable Mini Drone</td>
+              <td>85631</td>
+              <td>Debe</td>
+              <td class="advertencia-JE">Pendiente</td>
+              <td class="primario-JE">Detalles</td>
+            </tr>
+            <tr>
+              <td>Foldable Mini Drone</td>
+              <td>85631</td>
+              <td>Debe</td>
+              <td class="advertencia-JE">Pendiente</td>
+              <td class="primario-JE">Detalles</td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="#" class="hipervinculo-JE">Mostrar todos</a>
+      </div>
+
+      <!-- FIN DE LA TABLA PRINCIPAL DEL DASHBOARD -->
+
+    </main>
+
+    <!-- FIN DEL CONTENIDO PRINCIPAL MAIN -->
+
+    <!-- INICIO DEL CONTENIDO DE LA DERECHA -->
+
+    <div class="right-JE">
+
+      <!-- INICIO DE LAS OPCIONES DE LOGIN Y MODO OSCURO -->
+
+      <div class="top-JE">
+        <button id="menu-btn-JE">
+          <span class="material-icons-sharp">menu</span>
+        </button>
+        <div class="theme-toggler-JE">
+          <span class="material-icons-sharp active-JE">light_mode</span>
+          <span class="material-icons-sharp">dark_mode</span>
+        </div>
+        <div class="profile-JE">
+          <div class="info-JE">
+            <p class="p-JE">Hey <b class="b-JE">Daniel</b></p>
+            <small class="small-JE text-muted-JE">Admin</small>
+          </div>
+          <div class="profile-photo-JE">
+            <img class="img-JE" src="./images/profile-1.jpg" alt="Foto de Perfil">
+          </div>
+        </div>
+      </div>
+
+      <!-- FIN DE LAS OPCIONES DE LOGIN Y MODO OSCURO -->
+
+      <!-- INICIO DEL LISTADO DE EMPLEADOS -->
+
+      <div class="recent-updates-JE">
+        <h2>Recent Updates</h2>
+        <div class="updates-JE">
+
+          <!-- FILA 1 DE LOS EMPLEADOS -->
+          <div class="update-JE">
+            <div class="profile-photo-JE">
+              <img class="img-JE" src="./images/profile-2.jpg" alt="Empleado 1">
+            </div>
+            <div class="message-JE">
+              <p class="p-JE"><b class="b-JE">Mike Tyson</b> received his order of Night lion tech GPS drone.</p>
+              <small class="small-JE text-muted-JE">2 Minutes Ago</small>
+            </div>
+          </div>
+          <!-- FILA 2 DE LOS EMPLEADOS -->
+          <div class="update-JE">
+            <div class="profile-photo-JE">
+              <img class="img-JE" src="./images/profile-3.jpg">
+            </div>
+            <div class="message-JE">
+              <p class="p-JE"><b class="b-JE">Mike Tyson</b> received his order of Night lion tech GPS drone.</p>
+              <small class="small-JE text-muted-JE">2 Minutes Ago</small>
+            </div>
+          </div>
+          <!-- FILA 3 DE LOS EMPLEADOS -->
+          <div class="update-JE">
+            <div class="profile-photo-JE">
+              <img class="img-JE" src="./images/profile-4.jpg">
+            </div>
+            <div class="message-JE">
+              <p class="p-JE"><b class="b-JE">Mike Tyson</b> received his order of Night lion tech GPS drone.</p>
+              <small class="small-JE text-muted-JE">2 Minutes Ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FIN DEL LISTADO DE EMPLEADOS -->
+
+      <!-- INICIO DE LOS ULTIMOS PEDIDOS REALIZADOS -->
+
+      <div class="sales-analytics-JE">
+        <h2 class="h2-JE">Sales Analytics</h2>
+
+
+        <div class="item-JE online-JE">
+          <div class="icon-JE">
+            <span class="material-icons-sharp">shopping_cart</span>
+          </div>
+          <div class="right-JE">
+            <div class="info-JE">
+              <h3 class="h3-JE">ONLINE ORDERS</h3>
+              <small class="small-JE text-muted-JE">Last 24 Hours</small>
+            </div>
+            <h5 class="h5-JE exito-JE">+39%</h5>
+            <h3 class="h3-JE">3849</h3>
+          </div>
+        </div>
+
+
+        <div class="item-JE offline-JE">
+          <div class="icon-JE">
+            <span class="material-icons-sharp">local_mall</span>
+          </div>
+          <div class="right-JE">
+            <div class="info-JE">
+              <h3 class="h3-JE">OFFLINE ORDERS</h3>
+              <small class="small-JE text-muted-JE">Last 24 Hours</small>
+            </div>
+            <h5 class="h5-JE peligro-JE">-17%</h5>
+            <h3 class="h3-JE">1100</h3>
+          </div>
+        </div>
+
+
+        <div class="item-JE customers-JE">
+          <div class="icon-JE">
+            <span class="material-icons-sharp">person</span>
+          </div>
+          <div class="right-JE">
+            <div class="info-JE">
+              <h3 class="h3-JE">NEW CUSTOMERS</h3>
+              <small class="small-JE text-muted-JE">Last 24 Hours</small>
+            </div>
+            <h5 class="h5-JE exito-JE">+25%</h5>
+            <h3 class="h3-JE">849</h3>
+          </div>
+        </div>
+
+        <div class="item-JE add-product-JE">
+          <div>
+            <span class="material-icons-sharp">add</span>
+            <h3 class="h3-JE">Add Product</h3>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FIN DE LOS ULTIMOS PEDIDOS REALIZADOS -->
+
+    </div>
+
+    <!-- FIN DEL CONTENIDO DE LA DERECHA -->
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,750 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --color-primario: #7380ec;
+  --color-peligro: #ff7782;
+  --color-exito: #41f1b6;
+  --color-adventencia: #ffbb55;
+  --color-blanco: #fff;
+  --color-info-oscuro: #7d8da1;
+  --color-info-claro: #dce1eb;
+  --color-oscuro: #363949;
+  --color-claro: rgba(132, 139, 200, 0.18);
+  --color-primario-variante: #111e88;
+  --color-oscuro-variante: #677483;
+  --color-fondo: #f6f6f9;
+
+  --prueba1: #DDFEF8;
+  --prueba2: #23194F;
+
+  --carta-redondeado: 2rem;
+  --redondeado-1: 0.4rem;
+  --redondeado-2: 0.8rem;
+  --redondeado-3: 1.2rem;
+
+  --carta-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-claro);
+}
+
+/* ---------- DARK THEME VARIABLES ---------- */
+.dark-theme-variables-JE {
+  --color-fondo: #181a1e;
+  --color-blanco: #202528;
+  --color-oscuro: #edeffd;
+  --color-oscuro-variante: #a3bdcc;
+  --color-claro: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins, sans-serif;
+  font-size: 0.88rem;
+  background: var(--color-fondo);
+  user-select: none;
+  overflow-x: hidden;
+  color: var(--color-oscuro);
+}
+
+.container-JE {
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 23rem;
+}
+
+.hipervinculo-JE {
+  color: var(--color-oscuro);
+}
+
+.img-JE {
+  display: block;
+  width: 100%;
+}
+
+.h1-JE {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+.h2-JE {
+  font-size: 1.4rem;
+}
+
+.h3-JE {
+  font-size: 0.87rem;
+}
+
+.h4-JE {
+  font-size: 0.8rem;
+}
+
+.h5-JE {
+  font-size: 0.77rem;
+}
+
+.small-JE {
+  font-size: 0.75rem;
+}
+
+.profile-photo-JE {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text-muted-JE {
+  color: var(--color-info-oscuro);
+}
+
+.p-JE {
+  color: var(--color-oscuro-variante);
+}
+
+.b-JE {
+  color: var(--color-oscuro);
+}
+
+.primario-JE {
+  color: var(--color-primario) !important;
+}
+
+.peligro-JE {
+  color: var(--color-peligro) !important;
+}
+
+.exito-JE {
+  color: var(--color-exito) !important;
+}
+
+.advertencia-JE {
+  color: var(--color-adventencia) !important;
+}
+
+.aside-JE {
+  height: 100vh;
+}
+
+.aside-JE .top-JE {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+}
+
+.aside-JE .logo-JE {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.aside-JE .logo-JE .img-JE {
+  width: 2rem;
+  height: 2rem;
+}
+
+.aside-JE .close-JE {
+  display: none;
+}
+
+/* INICIO DE LA BARRA DE NAVEGACIÓN */
+
+.aside-JE .sidebar-JE {
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  position: relative;
+  top: 3rem;
+}
+
+.aside-JE .h3-JE {
+  font-weight: 500;
+}
+
+.aside-JE .hipervinculo-JE {
+  display: flex;
+  color: var(--color-info-oscuro);
+  margin-left: 2rem;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  height: 3.7rem;
+  transition: all 300ms ease;
+}
+
+.aside-JE .sidebar-JE .hipervinculo-JE span {
+  font-size: 1.6rem;
+  transition: all 300ms ease;
+}
+
+.aside-JE .sidebar-JE .hipervinculo-JE:last-child {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
+
+.aside-JE .sidebar-JE .hipervinculo-JE.active-JE {
+  background: var(--color-claro);
+  color: var(--color-primario);
+  margin-left: 0;
+}
+
+.aside-JE .sidebar-JE .hipervinculo-JE.active-JE::before {
+  content: '';
+  width: 6px;
+  height: 100%;
+  background: var(--color-primario);
+}
+
+.aside-JE .sidebar-JE .hipervinculo-JE.active-JE span {
+  color: var(--color-primario);
+  margin-left: calc(1rem - 3px);
+}
+
+.aside-JE .sidebar-JE .hipervinculo-JE:hover {
+  color: var(--color-primario);
+}
+
+.aside-JE .sidebar-JE .hipervinculo-JE:hover span {
+  margin-left: 1rem;
+}
+
+.aside-JE .sidebar-JE .message-count-danger-JE {
+  background: var(--color-peligro);
+  color: var(--color-blanco) !important;
+  padding: 2px 10px;
+  font-size: 11px !important;
+  border-radius: var(--redondeado-1);
+}
+
+.aside-JE .sidebar-JE .message-count-success-JE {
+  background: var(--color-exito);
+  color: var(--color-blanco) !important;
+  padding: 2px 10px;
+  font-size: 11px !important;
+  border-radius: var(--redondeado-1);
+}
+
+
+/* FIN DE LA BARRA DE NAVEGACIÓN */
+
+/* INICIO DEL MAIN */
+
+
+/* INICIO DE TARJETAS DEL MAIN */
+
+.main-JE {
+  margin-top: 1.4rem;
+}
+
+.main-JE .date-JE {
+  display: inline-block;
+  background: var(--color-claro);
+  border-radius: var(--redondeado-1);
+  margin-top: 1rem;
+  padding: 0.5rem 1.6rem;
+}
+
+.main-JE .date-JE input[type="date"] {
+  background: transparent;
+  color: var(--color-oscuro);
+}
+
+.main-JE .insights-JE {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.main-JE .insights-JE>div {
+  background: var(--color-blanco);
+  padding: var(--carta-padding);
+  border-radius: var(--carta-redondeado);
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.main-JE .insights-JE>div:hover {
+  box-shadow: none;
+}
+
+.main-JE .insights-JE>div span {
+  background: var(--color-primario);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--color-blanco);
+  font-size: 2rem;
+}
+
+.main-JE .insights-JE>div.expenses-JE span {
+  background: var(--color-peligro);
+}
+
+.main-JE .insights-JE>div.income-JE span {
+  background: var(--color-exito);
+}
+
+.main-JE .insights-JE>div .middle-JE {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-JE .insights-JE h3 {
+  margin: 1rem 0 0.6rem;
+  font-size: 1rem;
+}
+
+.main-JE .insights-JE .progress-JE {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+}
+
+.main-JE .insights-JE svg {
+  width: 7rem;
+  height: 7rem;
+}
+
+.main-JE .insights-JE svg circle {
+  fill: none;
+  stroke: var(--color-primario);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+  stroke-dashoffset: 110;
+  stroke-dashoffset: 92;
+}
+
+.main-JE .insights-JE .sales-JE svg circle {
+  stroke-dashoffset: -30;
+  stroke-dasharray: 200;
+}
+
+.main-JE .insights-JE .expenses-JE svg circle {
+  stroke-dashoffset: 20;
+  stroke-dasharray: 80;
+}
+
+.main-JE .insights-JE .income-JE svg circle {
+  stroke-dashoffset: 35;
+  stroke-dasharray: 110;
+}
+
+.main-JE .insights-JE .progress-JE .number-JE {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-JE .insights-JE small {
+  margin-top: 1.6rem;
+}
+
+/* FIN DE TARJETAS DEL MAIN */
+
+/* INICIO DE LA TABLA DEL MAIN */
+
+.main-JE .recent-orders-JE {
+  margin-top: 2rem;
+}
+
+.main-JE .recent-orders-JE h2 {
+  margin-bottom: 0.8rem;
+}
+
+.main-JE .recent-orders-JE table {
+  background: var(--color-blanco);
+  width: 100%;
+  border-radius: var(--carta-redondeado);
+  padding: var(--carta-padding);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.main-JE .recent-orders-JE table:hover {
+  box-shadow: none;
+}
+
+.main-JE table tbody td {
+  height: 2.8rem;
+  border-bottom: 1px solid var(--color-claro);
+  color: var(--color-oscuro-variante);
+}
+
+.main-JE table tbody tr:last-child td {
+  border: none;
+}
+
+.main-JE .recent-orders-JE a {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: var(--color-primario);
+}
+
+/* FIN DE LA TABLA DEL MAIN */
+
+/* FIN DEL MAIN */
+
+/* INICIO DEL CONTENIDO DE LA DERECHA */
+
+/* INICIO DEL CONTENIDO DE ARRIBA A LA DERECHA */
+
+.right-JE {
+  margin-top: 1.4rem;
+}
+
+.right-JE .top-JE {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+}
+
+.right-JE .top-JE button {
+  display: none;
+}
+
+.right-JE .theme-toggler-JE {
+  background: var(--color-claro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.6rem;
+  width: 4.2rem;
+  cursor: pointer;
+  border-radius: var(--redondeado-1);
+}
+
+.right-JE .theme-toggler-JE span {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-JE .theme-toggler-JE span.active-JE {
+  background: var(--color-primario);
+  color: white;
+  border-radius: var(--redondeado-1);
+}
+
+.right-JE .top-JE .profile-JE {
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+}
+
+/* FIN DEL CONTENIDO DE ARRIBA A LA DERECHA */
+
+/* INICIO DEL CONTENIDO DE ENMEDIO A LA DERECHA */
+
+.right-JE .recent-updates-JE {
+  margin-top: 1rem;
+}
+
+.right-JE .recent-updates-JE h2 {
+  margin-bottom: 0.8rem;
+}
+
+.right-JE .recent-updates-JE .updates-JE {
+  background: var(--color-blanco);
+  padding: var(--carta-padding);
+  border-radius: var(--carta-redondeado);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.right-JE .recent-updates-JE .updates-JE:hover {
+  box-shadow: none;
+}
+
+.right-JE .recent-updates-JE .updates-JE .update-JE {
+  display: grid;
+  grid-template-columns: 2.6rem auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* FIN DEL CONTENIDO DE ENMEDIO A LA DERECHA */
+
+/* INICIO DEL CONTENIDO DEL FINAL A LA DERECHA */
+
+.right-JE .sales-analytics-JE {
+  margin-top: 1.6rem;
+}
+
+.right-JE .sales-analytics-JE h2 {
+  margin-bottom: 0.8rem;
+}
+
+.right-JE .sales-analytics-JE .item-JE {
+  background: var(--color-blanco);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  padding: 1.4rem var(--carta-padding);
+  border-radius: var(--redondeado-3);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.right-JE .sales-analytics-JE .item-JE:hover {
+  box-shadow: none;
+}
+
+.right-JE .sales-analytics-JE .item-JE .right-JE {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: 0;
+  width: 100%;
+}
+
+.right-JE .sales-analytics-JE .item-JE .icon-JE {
+  padding: 0.6rem;
+  color: var(--color-blanco);
+  border-radius: 50%;
+  background: var(--color-primario);
+  display: flex;
+}
+
+.right-JE .sales-analytics-JE .item-JE.offline-JE .icon-JE {
+  background: var(--color-peligro);
+}
+
+.right-JE .sales-analytics-JE .item-JE.customers-JE .icon-JE {
+  background: var(--color-exito);
+}
+
+.right-JE .sales-analytics-JE .add-product-JE {
+  background-color: transparent;
+  border: 2px dashed var(--color-primario);
+  color: var(--color-primario);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease;
+}
+
+.right-JE .sales-analytics-JE .add-product-JE:hover {
+  background: var(--color-primario);
+  color: white;
+}
+
+.right-JE .sales-analytics-JE .add-product-JE div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.right-JE .sales-analytics-JE .add-product-JE div h3 {
+  font-weight: 600;
+}
+
+/* FECHA DEL CONTENIDO DEL FINAL A LA DERECHA */
+
+/* FIN DEL CONTENIDO DE LA DERECHA */
+
+/* RESPONSIVO PARA TABLETS */
+
+@media screen and (max-width: 1200px) {
+  .container-JE {
+    width: 94%;
+    grid-template-columns: 7rem auto 23rem;
+  }
+
+  .aside-JE .logo-JE h2 {
+    display: none;
+  }
+
+  .aside-JE .sidebar-JE h3 {
+    display: none;
+  }
+
+  .aside-JE .sidebar-JE a {
+    width: 5.6rem;
+  }
+
+  .aside-JE .sidebar-JE a:last-child {
+    position: relative;
+    margin-top: 1.8rem;
+  }
+
+  .main-JE .insights-JE {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .main-JE .recent-orders-JE {
+    width: 94%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0 0 8.8rem;
+  }
+
+  .main-JE .recent-orders-JE table {
+    width: 83vw;
+  }
+
+  .main-JE table thead tr th:last-child,
+  .main-JE table thead tr th:first-child {
+    display: none;
+  }
+
+  .main-JE table tbody tr td:last-child,
+  .main-JE table tbody tr td:first-child {
+    display: none;
+  }
+}
+
+/* RESPONSIVO PARA MÓVILES */
+
+@media screen and (max-width: 768px) {
+  .container-JE {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .aside-JE {
+    position: fixed;
+    left: -100%;
+    background: var(--color-blanco);
+    width: 18rem;
+    z-index: 3;
+    box-shadow: 1rem 3rem 4rem var(--color-claro);
+    height: 100vh;
+    padding-right: var(--carta-padding);
+    display: none;
+    animation: showMenuJE 400ms ease forwards;
+  }
+
+  @keyframes showMenuJE {
+    to {
+      left: 0;
+    }
+  }
+
+  .aside-JE .logo-JE {
+    margin-left: 1rem;
+  }
+
+  .aside-JE .logo-JE h2 {
+    display: inline;
+  }
+
+  .aside-JE .sidebar-JE h3 {
+    display: inline;
+  }
+
+  .aside-JE .sidebar-JE a {
+    width: 100%;
+    height: 3.4rem;
+  }
+
+  .aside-JE .sidebar-JE a:last-child {
+    position: absolute;
+    bottom: 5rem;
+  }
+
+  .aside-JE .close-JE {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .main-JE {
+    margin-top: 8rem;
+    padding: 0 1rem;
+  }
+
+  .main-JE .recent-orders-JE {
+    position: relative;
+    margin: 3rem 0 0 0;
+    width: 100%;
+  }
+
+  .main-JE .recent-orders-JE table {
+    margin: 0;
+    width: 100%;
+  }
+
+  .right-JE {
+    width: 94%;
+    margin: 0 auto 4rem;
+  }
+
+  .right-JE .top-JE {
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    padding: 0 0.8rem;
+    height: 4.6rem;
+    background: var(--color-blanco);
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+    box-shadow: 0 1rem 1rem var(--color-claro);
+  }
+
+  .right-JE .top-JE .theme-toggler {
+    width: 4.4rem;
+    position: absolute;
+    left: 66%;
+  }
+
+  .right-JE .profile-JE .info-JE {
+    display: none;
+  }
+
+  .right-JE .top-JE button {
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-oscuro);
+    position: absolute;
+    left: 1rem;
+  }
+
+  .right-JE .top-JE button span {
+    font-size: 2rem;
+  }
+
+
+
+}
