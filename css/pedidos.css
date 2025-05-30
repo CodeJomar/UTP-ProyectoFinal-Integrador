@@ -1,1 +1,113 @@
 @import './style.css';
+/* Add this CSS to your existing styles.css file */
+
+/* --- GENERAL STYLES FOR ORDER MANAGEMENT SECTION --- */
+.order-management {
+    margin-bottom: 2rem; /* Add some space below the controls */
+}
+
+.order-management .filter-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem; /* Space between elements */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.order-management .search-bar {
+    position: relative;
+    flex-grow: 1; /* Allow search bar to take available space */
+    max-width: 300px; /* Limit max width for desktop */
+}
+
+.order-management .search-bar input[type="text"] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    padding-right: 2.5rem; /* Space for the icon */
+    border: 1px solid var(--color-info-claro);
+    border-radius: var(--redondeado-1);
+    background: var(--color-blanco);
+    color: var(--color-oscuro);
+    transition: all 300ms ease;
+}
+
+.order-management .search-bar input[type="text"]:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 2px rgba(115, 128, 236, 0.2); /* Light primary shadow on focus */
+}
+
+.order-management .search-bar span.material-icons-sharp {
+    position: absolute;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-info-oscuro);
+    font-size: 1.5rem; /* Adjust icon size */
+    pointer-events: none; /* Make icon not interfere with input click */
+}
+
+.order-management .add-order-btn {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--redondeado-1);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.order-management .add-order-btn:hover {
+    background: var(--color-primario-variante); /* Darken primary color on hover */
+}
+
+.order-management .add-order-btn span {
+    font-size: 1.2rem; /* Adjust icon size within button */
+}
+
+
+/* Adjustments for the Recent Orders Table */
+.main-JE .recent-orders-JE table thead th:nth-child(5),
+.main-JE .recent-orders-JE table tbody td:nth-child(5) {
+    /* Style for 'Estado de Pago' column - no specific style needed as it uses existing success/warning/danger */
+}
+
+.main-JE .recent-orders-JE table thead th:nth-child(6),
+.main-JE .recent-orders-JE table tbody td:nth-child(6) {
+    /* Style for 'Estado de Envío' column */
+}
+
+/* Responsive adjustments for the new elements */
+@media screen and (max-width: 768px) {
+    .order-management .filter-controls {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: stretch; /* Stretch items to full width */
+    }
+
+    .order-management .search-bar {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .order-management .add-order-btn {
+        width: 100%; /* Full width button on small screens */
+        justify-content: center; /* Center content in button */
+    }
+}
+
+/* Specific styling for the table columns if needed */
+/* Ensure your table headers and cells wrap content if necessary */
+.main-JE .recent-orders-JE table th,
+.main-JE .recent-orders-JE table td {
+    white-space: nowrap; /* Prevent text wrapping for better table layout */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+}
+
+/* Increase column width for 'Producto' and 'Nombre del Cliente' if needed */
+.main-JE .recent-orders-JE table tbody td:nth-child(2), /* Nombre del Cliente */
+.main-JE .recent-orders-JE table tbody td:nth-child(3) { /* Producto */
+    max-width: 150px; /* Example max-width, adjust as needed */
+    white-space: normal; /* Allow wrapping for these specific columns if content is long */
+}
