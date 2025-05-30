@@ -1,1 +1,646 @@
 @import './style.css';
+
+/* ESTILOS PARA LA PÁGINA DE CUENTA */
+
+/* Perfil de cuenta */
+.account-profile-JE {
+  background: var(--color-blanco);
+  border-radius: var(--carta-redondeado);
+  padding: var(--carta-padding);
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.account-profile-JE:hover {
+  box-shadow: none;
+}
+
+.profile-header-JE {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-photo-large-JE {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--color-primario);
+}
+
+.profile-photo-edit-JE {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--color-primario);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blanco);
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.profile-photo-edit-JE:hover {
+  background: var(--color-primario-variante);
+}
+
+.profile-info-JE {
+  flex: 1;
+}
+
+.profile-info-JE h2 {
+  margin-bottom: 0.2rem;
+}
+
+.profile-stats-JE {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.profile-stats-JE .stat-JE {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.profile-stats-JE .stat-JE span {
+  font-size: 1.5rem;
+}
+
+/* Pestañas de cuenta */
+.account-tabs-JE {
+  margin-top: 2rem;
+}
+
+.tab-header-JE {
+  display: flex;
+  background: var(--color-blanco);
+  border-radius: var(--carta-redondeado) var(--carta-redondeado) 0 0;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.tab-item-JE {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-item-JE:hover {
+  background: var(--color-claro);
+}
+
+.tab-item-JE.active-tab-JE {
+  border-bottom: 3px solid var(--color-primario);
+  color: var(--color-primario);
+}
+
+.tab-item-JE.active-tab-JE span {
+  color: var(--color-primario);
+}
+
+.tab-content-JE {
+  background: var(--color-blanco);
+  border-radius: 0 0 var(--carta-redondeado) var(--carta-redondeado);
+  padding: var(--carta-padding);
+  box-shadow: var(--box-shadow);
+}
+
+.tab-pane-JE {
+  display: none;
+}
+
+.tab-pane-JE.active-pane-JE {
+  display: block;
+}
+
+/* Formulario de cuenta */
+.account-form-JE {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row-JE {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group-JE {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group-JE label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-oscuro);
+}
+
+.input-group-JE {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-info-claro);
+  border-radius: var(--redondeado-1);
+  overflow: hidden;
+}
+
+.input-group-JE span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  color: var(--color-info-oscuro);
+}
+
+.input-group-JE input {
+  flex: 1;
+  padding: 0.8rem;
+  background: transparent;
+  color: var(--color-oscuro);
+  font-family: inherit;
+}
+
+.input-group-JE .toggle-password-JE {
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--color-info-claro);
+  border-radius: var(--redondeado-1);
+  background: transparent;
+  color: var(--color-oscuro);
+  font-family: inherit;
+  resize: vertical;
+}
+
+.form-actions-JE {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-cancel-JE {
+  padding: 0.6rem 1.2rem;
+  background: var(--color-info-claro);
+  color: var(--color-oscuro);
+  border-radius: var(--redondeado-1);
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btn-cancel-JE:hover {
+  background: var(--color-info-oscuro);
+  color: var(--color-blanco);
+}
+
+.btn-save-JE {
+  padding: 0.6rem 1.2rem;
+  background: var(--color-primario);
+  color: var(--color-blanco);
+  border-radius: var(--redondeado-1);
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btn-save-JE:hover {
+  background: var(--color-primario-variante);
+}
+
+/* Opciones de seguridad */
+.security-options-JE {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.security-option-JE {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--color-fondo);
+  border-radius: var(--redondeado-1);
+}
+
+/* Switch toggle */
+.switch-JE {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch-JE input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-JE {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-info-claro);
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider-JE:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider-JE {
+  background-color: var(--color-primario);
+}
+
+input:checked+.slider-JE:before {
+  transform: translateX(26px);
+}
+
+/* Botón de texto */
+.btn-text-JE {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--color-primario);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-text-JE:hover {
+  text-decoration: underline;
+}
+
+/* Notificaciones */
+.notification-settings-JE {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.notification-group-JE {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notification-option-JE {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--color-fondo);
+  border-radius: var(--redondeado-1);
+}
+
+/* Facturación */
+.billing-info-JE {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.plan-card-JE {
+  background: var(--color-fondo);
+  border-radius: var(--redondeado-2);
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.plan-header-JE {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.plan-badge-JE {
+  background: var(--color-exito);
+  color: var(--color-blanco);
+  padding: 0.3rem 0.8rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+}
+
+.plan-features-JE {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.plan-feature-JE {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.btn-upgrade-JE {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--color-primario);
+  color: var(--color-blanco);
+  border-radius: var(--redondeado-1);
+  cursor: pointer;
+  transition: all 300ms ease;
+  text-align: center;
+}
+
+.btn-upgrade-JE:hover {
+  background: var(--color-primario-variante);
+}
+
+.payment-header-JE {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.payment-card-JE {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--color-fondo);
+  border-radius: var(--redondeado-1);
+  margin-bottom: 1rem;
+}
+
+.card-icon-JE {
+  background: var(--color-primario);
+  color: var(--color-blanco);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-details-JE {
+  flex: 1;
+}
+
+.card-actions-JE {
+  display: flex;
+  gap: 1rem;
+  color: var(--color-info-oscuro);
+}
+
+.card-actions-JE span {
+  cursor: pointer;
+}
+
+.card-actions-JE span:hover {
+  color: var(--color-oscuro);
+}
+
+.billing-table-JE {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.billing-table-JE th,
+.billing-table-JE td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-info-claro);
+}
+
+.billing-table-JE th {
+  color: var(--color-oscuro);
+  font-weight: 600;
+}
+
+.billing-table-JE td {
+  color: var(--color-oscuro-variante);
+}
+
+.billing-table-JE td:last-child {
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Dispositivos conectados */
+.connected-devices-JE {
+  margin-top: 1.6rem;
+}
+
+.connected-devices-JE h2 {
+  margin-bottom: 0.8rem;
+}
+
+.device-JE {
+  background: var(--color-blanco);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  padding: 1.4rem var(--carta-padding);
+  border-radius: var(--redondeado-3);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.device-JE:hover {
+  box-shadow: none;
+}
+
+.device-JE.current-JE {
+  border-left: 4px solid var(--color-exito);
+}
+
+.device-icon-JE {
+  background: var(--color-claro);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.device-info-JE {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.device-status-JE {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.device-status-JE.active-JE {
+  background: var(--color-exito);
+}
+
+.device-action-JE {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.btn-outline-JE {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background: transparent;
+  color: var(--color-peligro);
+  border: 1px solid var(--color-peligro);
+  border-radius: var(--redondeado-1);
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btn-outline-JE:hover {
+  background: var(--color-peligro);
+  color: var(--color-blanco);
+}
+
+/* Actividad reciente */
+.activity-icon-JE {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blanco);
+}
+
+.activity-icon-JE.security-JE {
+  background: var(--color-primario);
+}
+
+.activity-icon-JE.login-JE {
+  background: var(--color-adventencia);
+}
+
+.activity-icon-JE.profile-JE {
+  background: var(--color-exito);
+}
+
+/* Responsive para tablets */
+@media screen and (max-width: 1200px) {
+  .form-row-JE {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-header-JE {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-stats-JE {
+    justify-content: center;
+  }
+
+  .tab-header-JE {
+    flex-wrap: wrap;
+  }
+
+  .tab-item-JE {
+    flex: 0 0 50%;
+  }
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 768px) {
+  .tab-item-JE {
+    flex: 0 0 100%;
+  }
+
+  .tab-item-JE h3 {
+    font-size: 0.8rem;
+  }
+
+  .device-info-JE {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .security-option-JE,
+  .notification-option-JE {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .payment-card-JE {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-actions-JE {
+    margin-top: 1rem;
+  }
+
+  .billing-table-JE thead {
+    display: none;
+  }
+
+  .billing-table-JE tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-info-claro);
+    border-radius: var(--redondeado-1);
+    padding: 0.5rem;
+  }
+
+  .billing-table-JE tbody td {
+    display: block;
+    text-align: right;
+    padding: 0.5rem;
+    position: relative;
+    border-bottom: none;
+  }
+
+  .billing-table-JE tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0.5rem;
+    font-weight: 600;
+    color: var(--color-oscuro);
+  }
+}
