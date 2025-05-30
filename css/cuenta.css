@@ -45,6 +45,18 @@
   color: var(--color-blanco);
   cursor: pointer;
   transition: all 300ms ease;
+  overflow: hidden;
+}
+
+.profile-photo-edit-JE input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .profile-photo-edit-JE:hover {

@@ -1,1 +1,550 @@
 @import './style.css';
+
+/* ESTILOS PARA LA PÁGINA DE TIERS */
+
+/* Header de precios */
+.pricing-header-JE {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: var(--color-blanco);
+  border-radius: var(--carta-redondeado);
+  box-shadow: var(--box-shadow);
+}
+
+.pricing-header-JE h2 {
+  margin-bottom: 0.5rem;
+  color: var(--color-oscuro);
+}
+
+.pricing-header-JE p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Toggle de facturación */
+.billing-toggle-JE {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.billing-label-JE {
+  font-weight: 500;
+  color: var(--color-oscuro);
+}
+
+.billing-switch-JE {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.billing-switch-JE input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.billing-slider-JE {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-info-claro);
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.billing-slider-JE:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked+.billing-slider-JE {
+  background-color: var(--color-primario);
+}
+
+input:checked+.billing-slider-JE:before {
+  transform: translateX(30px);
+}
+
+.discount-badge-JE {
+  background: var(--color-exito);
+  color: var(--color-blanco);
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+/* Tarjetas de precios */
+.pricing-cards-JE {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.pricing-card-JE {
+  background: var(--color-blanco);
+  border-radius: var(--carta-redondeado);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.pricing-card-JE:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4rem 6rem var(--color-claro);
+}
+
+.pricing-card-JE.popular-JE {
+  border-color: var(--color-primario);
+  transform: scale(1.05);
+}
+
+.pricing-card-JE.popular-JE:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.popular-badge-JE {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primario);
+  color: var(--color-blanco);
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.plan-header-JE {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.plan-icon-JE {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 2rem;
+}
+
+.free-plan-JE .plan-icon-JE {
+  background: var(--color-info-claro);
+  color: var(--color-info-oscuro);
+}
+
+.standard-plan-JE .plan-icon-JE {
+  background: var(--color-adventencia);
+  color: var(--color-blanco);
+}
+
+.pro-plan-JE .plan-icon-JE {
+  background: var(--color-primario);
+  color: var(--color-blanco);
+}
+
+.team-plan-JE .plan-icon-JE {
+  background: var(--color-peligro);
+  color: var(--color-blanco);
+}
+
+.plan-header-JE h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.plan-price-JE {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.currency-JE {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-oscuro);
+}
+
+.amount-JE {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-oscuro);
+}
+
+.period-JE {
+  font-size: 1rem;
+  color: var(--color-info-oscuro);
+}
+
+.plan-features-JE {
+  margin-bottom: 2rem;
+}
+
+.feature-JE {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  padding: 0.5rem 0;
+}
+
+.feature-JE.disabled-JE {
+  opacity: 0.5;
+}
+
+.feature-JE.disabled-JE span:last-child {
+  text-decoration: line-through;
+}
+
+.plan-button-JE {
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--redondeado-1);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.current-plan-JE {
+  background: var(--color-exito);
+  color: var(--color-blanco);
+}
+
+.upgrade-button-JE {
+  background: var(--color-primario);
+  color: var(--color-blanco);
+}
+
+.upgrade-button-JE:hover {
+  background: var(--color-primario-variante);
+}
+
+.contact-button-JE {
+  background: var(--color-peligro);
+  color: var(--color-blanco);
+}
+
+.contact-button-JE:hover {
+  background: #e66b75;
+}
+
+/* FAQ Section */
+.faq-section-JE {
+  margin-top: 3rem;
+  background: var(--color-blanco);
+  border-radius: var(--carta-redondeado);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+/* FAQ en el sidebar */
+.faq-sidebar-JE {
+  margin-top: 1.6rem;
+}
+
+.faq-section-JE h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faq-item-JE {
+  border-bottom: 1px solid var(--color-info-claro);
+  margin-bottom: 1rem;
+}
+
+.faq-item-JE:last-child {
+  border-bottom: none;
+}
+
+.faq-question-JE {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.faq-question-JE:hover {
+  color: var(--color-primario);
+}
+
+.faq-question-JE h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.faq-answer-JE {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease;
+  padding: 0 0 1rem 0;
+}
+
+.faq-item-JE.active-JE .faq-answer-JE {
+  max-height: 200px;
+}
+
+/* Panel derecho - Comparación de planes */
+.plan-comparison-JE {
+  margin-top: 1.6rem;
+}
+
+.plan-comparison-JE h2 {
+  margin-bottom: 0.8rem;
+}
+
+.current-plan-info-JE {
+  background: var(--color-blanco);
+  padding: var(--carta-padding);
+  border-radius: var(--carta-redondeado);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.current-plan-info-JE:hover {
+  box-shadow: none;
+}
+
+.plan-badge-large-JE {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--color-claro);
+  border-radius: var(--redondeado-2);
+}
+
+.plan-badge-large-JE span {
+  font-size: 1.5rem;
+  color: var(--color-info-oscuro);
+}
+
+.usage-stats-JE {
+  margin-bottom: 1.5rem;
+}
+
+.usage-item-JE {
+  margin-bottom: 1rem;
+}
+
+.usage-label-JE {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-oscuro);
+}
+
+.usage-label-JE span:first-child {
+  font-size: 1rem;
+  color: var(--color-info-oscuro);
+}
+
+.usage-bar-JE {
+  background: var(--color-info-claro);
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.3rem;
+}
+
+.usage-progress-JE {
+  height: 100%;
+  background: var(--color-primario);
+  border-radius: 4px;
+  transition: width 300ms ease;
+}
+
+.usage-text-JE {
+  font-size: 0.8rem;
+  color: var(--color-info-oscuro);
+}
+
+.upgrade-cta-JE {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--color-primario);
+  color: var(--color-blanco);
+  border-radius: var(--redondeado-1);
+  cursor: pointer;
+  transition: all 300ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.upgrade-cta-JE:hover {
+  background: var(--color-primario-variante);
+}
+
+/* Sección de beneficios */
+.benefits-section-JE {
+  margin-top: 1.6rem;
+}
+
+.benefits-section-JE h2 {
+  margin-bottom: 0.8rem;
+}
+
+.benefit-item-JE {
+  background: var(--color-blanco);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  padding: 1rem;
+  border-radius: var(--redondeado-2);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.benefit-item-JE:hover {
+  box-shadow: none;
+  transform: translateX(5px);
+}
+
+.benefit-icon-JE {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-claro);
+  color: var(--color-primario);
+  font-size: 1.2rem;
+}
+
+.benefit-content-JE h4 {
+  margin-bottom: 0.3rem;
+  color: var(--color-oscuro);
+}
+
+/* Responsive para tablets */
+@media screen and (max-width: 1200px) {
+  .pricing-cards-JE {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-card-JE.popular-JE {
+    transform: none;
+  }
+
+  .pricing-card-JE.popular-JE:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 768px) {
+  .pricing-cards-JE {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .pricing-header-JE {
+    padding: 1.5rem;
+  }
+
+  .billing-toggle-JE {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .plan-price-JE {
+    margin-bottom: 1.5rem;
+  }
+
+  .amount-JE {
+    font-size: 2.5rem;
+  }
+
+  .faq-section-JE {
+    padding: 1.5rem;
+  }
+
+  .faq-question-JE {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .benefit-item-JE {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .usage-label-JE {
+    justify-content: center;
+  }
+}
+
+/* Animaciones adicionales */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pricing-card-JE {
+  animation: slideInUp 0.6s ease forwards;
+}
+
+.pricing-card-JE:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.pricing-card-JE:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.pricing-card-JE:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.pricing-card-JE:nth-child(4) {
+  animation-delay: 0.4s;
+}
