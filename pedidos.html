@@ -4,13 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dash Flow - Control de Finanzas</title>
+  <title>Dash Flow </title>
 
-  <!-- Icons de Google -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
 
-  <!-- CSS Externo -->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/pedidos.css">
 
   <script defer src="./js/script.js"></script>
 </head>
@@ -18,8 +16,6 @@
 <body>
 
   <div class="container-JE">
-
-    <!-- INICIO DE LA BARRA DE NAVEGACIÓN -->
 
     <aside class="aside-JE">
       <div class="top-JE">
@@ -34,7 +30,6 @@
         </div>
 
       </div>
-
 
       <div class="sidebar-JE">
 
@@ -88,159 +83,397 @@
       </div>
     </aside>
 
-    <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
-
-    <!-- INICIO DEL CONTENIDO PRINCIPAL MAIN -->
-
     <main class="main-JE">
-      <h1 class="h1-JE">Dashboard</h1>
 
-      <div class="date-JE">
-        <input type="date">
+      <div class="page-header-JE">
+        <h1 class="h1-JE">Gestión de Pedidos</h1>
       </div>
 
-      <!-- INICIO DEL CONTENEDOR DE LAS TARJETAS DE ARRIBA DEL DASHBOARD -->
-
-      <div class="insights-JE">
-
-        <!-- INICIO DE LA PRIMERA TARJETA SUPERIOR DEL DASHBOARD -->
-
-        <div class="sales-JE">
-          <span class="material-icons-sharp">analytics</span>
-          <div class="middle-JE">
-            <div class="left-JE">
-              <h3 class="h3-JE">Total Sales</h3>
-              <h1 class="h1-JE">$25,024</h1>
-            </div>
-            <div class="progress-JE">
-              <svg>
-                <circle cx="38" cy="38" r="36"></circle>
-              </svg>
-              <div class="number-JE">
-                <p class="p-JE">81%</p>
-              </div>
-            </div>
+      <div class="products-tabs-JE">
+        <div class="tab-header-JE">
+          <div class="tab-item-JE active-tab-JE" data-tab="dashboard">
+            <span class="material-icons-sharp">analytics</span>
+            <h3 class="h3-JE">Dashboard</h3>
           </div>
-          <small class="small-JE text-muted-JE">Last 24 Hours</small>
+          <div class="tab-item-JE" data-tab="products">
+            <span class="material-icons-sharp">inventory_2</span>
+            <h3 class="h3-JE">Lista de Pedidos</h3>
+          </div>
+          <div class="tab-item-JE" data-tab="form">
+            <span class="material-icons-sharp">add_box</span>
+            <h3 class="h3-JE">Crear/Editar Pedido</h3>
+          </div>
         </div>
 
-        <!-- FIN DE LA PRIMERA TARJETA SUPERIOR DEL DASHBOARD -->
+        <div class="tab-content-JE">
 
-        <!-- INICIO DE LA SEGUNDA TARJETA SUPERIOR DEL DASHBOARD -->
+          <div class="tab-pane-JE active-pane-JE" id="dashboard">
 
-        <div class="expenses-JE">
-          <span class="material-icons-sharp">bar_chart</span>
-          <div class="middle-JE">
-            <div class="left-JE">
-              <h3 class="h3-JE">Total Expenses</h3>
-              <h1 class="h1-JE">$14,204</h1>
-            </div>
-            <div class="progress-JE">
-              <svg>
-                <circle cx="38" cy="38" r="36"></circle>
-              </svg>
-              <div class="number-JE">
-                <p class="p-JE">81%</p>
+            <div class="stats-grid-JE">
+              <div class="stat-card-JE">
+                <div class="stat-icon-JE">
+                  <span class="material-icons-sharp">inventory</span>
+                </div>
+                <div class="stat-content-JE">
+                  <h3 class="h3-JE">Total Pedidos</h3>
+                  <h2 class="h2-JE">1,247</h2>
+                  <p class="p-JE exito-JE">+12% este mes</p>
+                </div>
+              </div>
+
+              <div class="stat-card-JE">
+                <div class="stat-icon-JE">
+                  <span class="material-icons-sharp">trending_up</span>
+                </div>
+                <div class="stat-content-JE">
+                  <h3 class="h3-JE">Pedidos Activos</h3>
+                  <h2 class="h2-JE">1,156</h2>
+                  <p class="p-JE exito-JE">92.7% del total</p>
+                </div>
+              </div>
+
+              <div class="stat-card-JE">
+                <div class="stat-icon-JE">
+                  <span class="material-icons-sharp">pending_actions</span>
+                </div>
+                <div class="stat-content-JE">
+                  <h3 class="h3-JE">Pedidos Pendientes</h3>
+                  <h2 class="h2-JE">23</h2>
+                  <p class="p-JE advertencia-JE">Requiere atención</p>
+                </div>
+              </div>
+
+              <div class="stat-card-JE">
+                <div class="stat-icon-JE">
+                  <span class="material-icons-sharp">cancel_schedule_send</span>
+                </div>
+                <div class="stat-content-JE">
+                  <h3 class="h3-JE">Pedidos Cancelados</h3>
+                  <h2 class="h2-JE">8</h2>
+                  <p class="p-JE peligro-JE">Revisar</p>
+                </div>
               </div>
             </div>
-          </div>
-          <small class="small-JE text-muted-JE">Last 24 Hours</small>
-        </div>
 
-        <!-- FIN DE LA SEGUNDA TARJETA SUPERIOR DEL DASHBOARD -->
+            <div class="featured-products-JE">
+              <h2 class="h2-JE">Pedidos Recientes</h2>
 
-        <!-- INICIO DE LA TERCERA TARJETA SUPERIOR DEL DASHBOARD -->
+              <div class="featured-grid-JE">
 
-        <div class="income-JE">
-          <span class="material-icons-sharp">stacked_line_chart</span>
-          <div class="middle-JE">
-            <div class="left-JE">
-              <h3 class="h3-JE">Total Income</h3>
-              <h1 class="h1-JE">$10,084</h1>
-            </div>
-            <div class="progress-JE">
-              <svg>
-                <circle cx="38" cy="38" r="36"></circle>
-              </svg>
-              <div class="number-JE">
-                <p class="p-JE">44%</p>
+                <div class="featured-card-JE">
+                  <div class="featured-header-JE">
+                    <div class="featured-badge-JE week-JE">
+                      <span class="material-icons-sharp">star</span>
+                      Pedido Grande - Semana
+                    </div>
+                  </div>
+                  <div class="product-image-JE">
+                    <img src="/placeholder.svg?height=120&width=120" alt="Cliente">
+                  </div>
+                  <div class="product-info-JE">
+                    <h3 class="h3-JE">Pedido #SMG2024-001</h3>
+                    <p class="p-JE text-muted-JE">Cliente: Juan Pérez</p>
+                    <div class="product-stats-JE">
+                      <div class="stat-JE">
+                        <span class="material-icons-sharp">shopping_cart</span>
+                        <span>5 ítems</span>
+                      </div>
+                      <div class="stat-JE">
+                        <span class="material-icons-sharp">attach_money</span>
+                        <span>$8,340.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="featured-card-JE">
+                  <div class="featured-header-JE">
+                    <div class="featured-badge-JE month-JE">
+                      <span class="material-icons-sharp">emoji_events</span>
+                      Pedido Grande - Mes
+                    </div>
+                  </div>
+                  <div class="product-image-JE">
+                    <img src="/placeholder.svg?height=120&width=120" alt="Cliente">
+                  </div>
+                  <div class="product-info-JE">
+                    <h3 class="h3-JE">Pedido #LPT2024-042</h3>
+                    <p class="p-JE text-muted-JE">Cliente: María García</p>
+                    <div class="product-stats-JE">
+                      <div class="stat-JE">
+                        <span class="material-icons-sharp">shopping_cart</span>
+                        <span>12 ítems</span>
+                      </div>
+                      <div class="stat-JE">
+                        <span class="material-icons-sharp">attach_money</span>
+                        <span>$12,500.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
-          </div>
-          <small class="small-JE text-muted-JE">Last 24 Hours</small>
-        </div>
 
-        <!-- FIN DE LA TERCERA TARJETA SUPERIOR DEL DASHBOARD -->
+          </div>
+
+          <div class="tab-pane-JE" id="products">
+
+            <div class="filters-section-JE">
+              <div class="search-box-JE">
+                <span class="material-icons-sharp">search</span>
+                <input type="text" placeholder="Buscar pedidos..." id="searchInput">
+              </div>
+
+              <div class="filters-JE">
+                <select id="categoryFilter">
+                  <option value="">Todas las categorías</option>
+                  <option value="pendiente">Pendiente</option>
+                  <option value="procesando">Procesando</option>
+                  <option value="enviado">Enviado</option>
+                  <option value="entregado">Entregado</option>
+                  <option value="cancelado">Cancelado</option>
+                </select>
+
+                <select id="statusFilter">
+                  <option value="">Todos los estados</option>
+                  <option value="pagado">Pagado</option>
+                  <option value="no-pagado">No Pagado</option>
+                </select>
+
+                <button class="btn-secondary-JE" id="clearFilters">
+                  <span class="material-icons-sharp">clear</span>
+                  Limpiar
+                </button>
+              </div>
+            </div>
+
+            <div class="products-table-JE">
+              <table id="productsTable">
+                <thead>
+                  <tr>
+                    <th>
+                      <input type="checkbox" id="selectAll">
+                    </th>
+                    <th>ID Pedido</th>
+                    <th>Cliente</th>
+                    <th>Fecha</th>
+                    <th>Total</th>
+                    <th>Estado de Pedido</th>
+                    <th>Estado de Pago</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="productsTableBody">
+                  <tr>
+                    <td><input type="checkbox" class="product-checkbox"></td>
+                    <td>#P2024001</td>
+                    <td>Ana García</td>
+                    <td>2024-05-28</td>
+                    <td>$150.00</td>
+                    <td><span class="status-badge advertencia-JE">Pendiente</span></td>
+                    <td><span class="status-badge peligro-JE">No Pagado</span></td>
+                    <td>
+                      <button class="btn-action-JE edit-btn"><span class="material-icons-sharp">edit</span></button>
+                      <button class="btn-action-JE delete-btn"><span class="material-icons-sharp">delete</span></button>
+                    </td>
+                  </tr>
+                   <tr>
+                    <td><input type="checkbox" class="product-checkbox"></td>
+                    <td>#P2024002</td>
+                    <td>Luis Fernández</td>
+                    <td>2024-05-27</td>
+                    <td>$320.50</td>
+                    <td><span class="status-badge exito-JE">Entregado</span></td>
+                    <td><span class="status-badge exito-JE">Pagado</span></td>
+                    <td>
+                      <button class="btn-action-JE edit-btn"><span class="material-icons-sharp">edit</span></button>
+                      <button class="btn-action-JE delete-btn"><span class="material-icons-sharp">delete</span></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="product-checkbox"></td>
+                    <td>#P2024003</td>
+                    <td>Sofía Ramírez</td>
+                    <td>2024-05-26</td>
+                    <td>$75.00</td>
+                    <td><span class="status-badge info-JE">Procesando</span></td>
+                    <td><span class="status-badge exito-JE">Pagado</span></td>
+                    <td>
+                      <button class="btn-action-JE edit-btn"><span class="material-icons-sharp">edit</span></button>
+                      <button class="btn-action-JE delete-btn"><span class="material-icons-sharp">delete</span></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pagination-JE">
+              <button class="pagination-btn-JE" id="prevPage">
+                <span class="material-icons-sharp">chevron_left</span>
+              </button>
+              <div class="pagination-info-JE">
+                <span>Página <span id="currentPage">1</span> de <span id="totalPages">10</span></span>
+              </div>
+              <button class="pagination-btn-JE" id="nextPage">
+                <span class="material-icons-sharp">chevron_right</span>
+              </button>
+            </div>
+
+            <div class="bulk-actions-JE" id="bulkActions" style="display: none;">
+              <div class="bulk-info-JE">
+                <span id="selectedCount">0</span> pedidos seleccionados
+              </div>
+              <div class="bulk-buttons-JE">
+                <button class="btn-secondary-JE" id="bulkActivate">
+                  <span class="material-icons-sharp">check_circle</span>
+                  Marcar como Completado
+                </button>
+                <button class="btn-secondary-JE" id="bulkDeactivate">
+                  <span class="material-icons-sharp">cancel</span>
+                  Marcar como Cancelado
+                </button>
+                <button class="btn-danger-JE" id="bulkDelete">
+                  <span class="material-icons-sharp">delete</span>
+                  Eliminar
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tab-pane-JE" id="form">
+
+            <div class="form-header-JE">
+              <h2 class="h2-JE" id="formTitle">Crear Nuevo Pedido</h2>
+              <button class="btn-secondary-JE" id="cancelForm">
+                <span class="material-icons-sharp">close</span>
+                Cancelar
+              </button>
+            </div>
+
+            <form class="product-form-JE" id="productForm">
+
+              <div class="form-section-JE">
+                <h3 class="h3-JE">Información del Pedido</h3>
+
+                <div class="form-row-JE">
+                  <div class="form-group-JE">
+                    <label for="orderId">ID del Pedido *</label>
+                    <input type="text" id="orderId" name="orderId" required>
+                  </div>
+
+                  <div class="form-group-JE">
+                    <label for="orderDate">Fecha del Pedido *</label>
+                    <input type="date" id="orderDate" name="orderDate" required>
+                  </div>
+                </div>
+
+                <div class="form-row-JE">
+                  <div class="form-group-JE">
+                    <label for="customerName">Nombre del Cliente *</label>
+                    <input type="text" id="customerName" name="customerName" required>
+                  </div>
+
+                  <div class="form-group-JE">
+                    <label for="customerEmail">Email del Cliente</label>
+                    <input type="email" id="customerEmail" name="customerEmail">
+                  </div>
+                </div>
+
+                <div class="form-group-JE">
+                  <label for="shippingAddress">Dirección de Envío</label>
+                  <textarea id="shippingAddress" name="shippingAddress" rows="3"></textarea>
+                </div>
+              </div>
+
+              <div class="form-section-JE">
+                <h3 class="h3-JE">Detalles de los Productos</h3>
+                <div id="productItemsContainer">
+                  <div class="product-item-JE">
+                    <div class="form-group-JE">
+                      <label for="productSelect1">Producto *</label>
+                      <select id="productSelect1" name="product" required>
+                        <option value="">Seleccionar producto</option>
+                        <option value="smartphone">Smartphone Galaxy Pro</option>
+                        <option value="laptop">Laptop Gaming X1</option>
+                        <option value="headphones">Auriculares Inalámbricos</option>
+                      </select>
+                    </div>
+                    <div class="form-group-JE">
+                      <label for="quantity1">Cantidad *</label>
+                      <input type="number" id="quantity1" name="quantity" min="1" value="1" required>
+                    </div>
+                    <div class="form-group-JE">
+                      <label for="itemPrice1">Precio Unitario *</label>
+                      <div class="input-with-icon-JE">
+                        <span class="material-icons-sharp">attach_money</span>
+                        <input type="number" id="itemPrice1" name="itemPrice" step="0.01" required>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-danger-JE remove-item-JE"><span class="material-icons-sharp">remove</span></button>
+                  </div>
+                </div>
+                <button type="button" class="btn-secondary-JE" id="addProductItem">
+                  <span class="material-icons-sharp">add</span> Agregar Producto
+                </button>
+              </div>
+
+              <div class="form-section-JE">
+                <h3 class="h3-JE">Pago y Estado</h3>
+
+                <div class="form-row-JE">
+                  <div class="form-group-JE">
+                    <label for="totalAmount">Monto Total *</label>
+                    <div class="input-with-icon-JE">
+                      <span class="material-icons-sharp">attach_money</span>
+                      <input type="number" id="totalAmount" name="totalAmount" step="0.01" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group-JE">
+                    <label for="paymentStatus">Estado de Pago *</label>
+                    <select id="paymentStatus" name="paymentStatus" required>
+                      <option value="pagado">Pagado</option>
+                      <option value="pendiente">Pendiente</option>
+                      <option value="reembolsado">Reembolsado</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group-JE">
+                  <label for="orderStatus">Estado del Pedido *</label>
+                  <select id="orderStatus" name="orderStatus" required>
+                    <option value="pendiente">Pendiente</option>
+                    <option value="procesando">Procesando</option>
+                    <option value="enviado">Enviado</option>
+                    <option value="entregado">Entregado</option>
+                    <option value="cancelado">Cancelado</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-actions-JE">
+                <button type="button" class="btn-secondary-JE" id="resetForm">
+                  <span class="material-icons-sharp">refresh</span>
+                  Limpiar
+                </button>
+                <button type="submit" class="btn-primary-JE">
+                  <span class="material-icons-sharp">save</span>
+                  <span id="submitText">Guardar Pedido</span>
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
       </div>
-
-      <!-- FIN DEL CONTENEDOR DE LAS TARJETAS DE ARRIBA DEL DASHBOARD -->
-
-      <!-- INICIO DE LA TABLA PRINCIPAL DEL DASHBOARD -->
-
-      <div class="recent-orders-JE">
-        <h2>Recent Orders</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Nombre del Producto</th>
-              <th>Número del Producto</th>
-              <th>Pago</th>
-              <th>Estado</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Foldable Mini Drone</td>
-              <td>85631</td>
-              <td>Debe</td>
-              <td class="advertencia-JE">Pendiente</td>
-              <td class="primario-JE">Detalles</td>
-            </tr>
-            <tr>
-              <td>Foldable Mini Drone</td>
-              <td>85631</td>
-              <td>Debe</td>
-              <td class="advertencia-JE">Pendiente</td>
-              <td class="primario-JE">Detalles</td>
-            </tr>
-            <tr>
-              <td>Foldable Mini Drone</td>
-              <td>85631</td>
-              <td>Debe</td>
-              <td class="advertencia-JE">Pendiente</td>
-              <td class="primario-JE">Detalles</td>
-            </tr>
-            <tr>
-              <td>Foldable Mini Drone</td>
-              <td>85631</td>
-              <td>Debe</td>
-              <td class="advertencia-JE">Pendiente</td>
-              <td class="primario-JE">Detalles</td>
-            </tr>
-            <tr>
-              <td>Foldable Mini Drone</td>
-              <td>85631</td>
-              <td>Debe</td>
-              <td class="advertencia-JE">Pendiente</td>
-              <td class="primario-JE">Detalles</td>
-            </tr>
-          </tbody>
-        </table>
-        <a href="#" class="hipervinculo-JE">Mostrar todos</a>
-      </div>
-
-      <!-- FIN DE LA TABLA PRINCIPAL DEL DASHBOARD -->
 
     </main>
 
-    <!-- FIN DEL CONTENIDO PRINCIPAL MAIN -->
-
-    <!-- INICIO DEL CONTENIDO DE LA DERECHA -->
-
     <div class="right-JE">
-
-      <!-- INICIO DE LAS OPCIONES DE LOGIN Y MODO OSCURO -->
 
       <div class="top-JE">
         <button id="menu-btn-JE">
@@ -261,114 +494,94 @@
         </div>
       </div>
 
-      <!-- FIN DE LAS OPCIONES DE LOGIN Y MODO OSCURO -->
+      <div class="quick-actions-JE">
+        <h2 class="h2-JE">Acciones Rápidas</h2>
 
-      <!-- INICIO DEL LISTADO DE EMPLEADOS -->
-
-      <div class="recent-updates-JE">
-        <h2>Recent Updates</h2>
-        <div class="updates-JE">
-
-          <!-- FILA 1 DE LOS EMPLEADOS -->
-          <div class="update-JE">
-            <div class="profile-photo-JE">
-              <img class="img-JE" src="./images/profile-2.jpg" alt="Empleado 1">
-            </div>
-            <div class="message-JE">
-              <p class="p-JE"><b class="b-JE">Mike Tyson</b> received his order of Night lion tech GPS drone.</p>
-              <small class="small-JE text-muted-JE">2 Minutes Ago</small>
-            </div>
+        <button class="quick-action-btn-JE" id="addOrderBtn">
+          <span class="material-icons-sharp">add</span>
+          <div class="action-content-JE">
+            <h4 class="h4-JE">Nuevo Pedido</h4>
+            <p class="p-JE text-muted-JE">Registrar un nuevo pedido</p>
           </div>
-          <!-- FILA 2 DE LOS EMPLEADOS -->
-          <div class="update-JE">
-            <div class="profile-photo-JE">
-              <img class="img-JE" src="./images/profile-3.jpg">
-            </div>
-            <div class="message-JE">
-              <p class="p-JE"><b class="b-JE">Mike Tyson</b> received his order of Night lion tech GPS drone.</p>
-              <small class="small-JE text-muted-JE">2 Minutes Ago</small>
-            </div>
+        </button>
+
+        <button class="quick-action-btn-JE" id="importOrdersBtn">
+          <span class="material-icons-sharp">upload</span>
+          <div class="action-content-JE">
+            <h4 class="h4-JE">Importar CSV</h4>
+            <p class="p-JE text-muted-JE">Cargar pedidos masivamente</p>
           </div>
-          <!-- FILA 3 DE LOS EMPLEADOS -->
-          <div class="update-JE">
-            <div class="profile-photo-JE">
-              <img class="img-JE" src="./images/profile-4.jpg">
-            </div>
-            <div class="message-JE">
-              <p class="p-JE"><b class="b-JE">Mike Tyson</b> received his order of Night lion tech GPS drone.</p>
-              <small class="small-JE text-muted-JE">2 Minutes Ago</small>
-            </div>
+        </button>
+
+        <button class="quick-action-btn-JE" id="exportOrdersBtn">
+          <span class="material-icons-sharp">download</span>
+          <div class="action-content-JE">
+            <h4 class="h4-JE">Exportar Datos</h4>
+            <p class="p-JE text-muted-JE">Descargar lista de pedidos</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="inventory-alerts-JE">
+        <h2 class="h2-JE">Alertas de Pedidos</h2>
+
+        <div class="alert-item-JE critical-JE">
+          <div class="alert-icon-JE">
+            <span class="material-icons-sharp">error</span>
+          </div>
+          <div class="alert-content-JE">
+            <h4 class="h4-JE">Pedidos No Pagados</h4>
+            <p class="p-JE">8 pedidos pendientes de pago</p>
+            <button class="alert-action-JE">Revisar Pagos</button>
+          </div>
+        </div>
+
+        <div class="alert-item-JE warning-JE">
+          <div class="alert-icon-JE">
+            <span class="material-icons-sharp">warning</span>
+          </div>
+          <div class="alert-content-JE">
+            <h4 class="h4-JE">Pedidos Pendientes de Envío</h4>
+            <p class="p-JE">23 pedidos por procesar</p>
+            <button class="alert-action-JE">Preparar Envíos</button>
+          </div>
+        </div>
+
+        <div class="alert-item-JE info-JE">
+          <div class="alert-icon-JE">
+            <span class="material-icons-sharp">info</span>
+          </div>
+          <div class="alert-content-JE">
+            <h4 class="h4-JE">Pedidos Entregados</h4>
+            <p class="p-JE">91 pedidos completados</p>
+            <button class="alert-action-JE">Ver Historial</button>
           </div>
         </div>
       </div>
 
-      <!-- FIN DEL LISTADO DE EMPLEADOS -->
-
-      <!-- INICIO DE LOS ULTIMOS PEDIDOS REALIZADOS -->
-
-      <div class="sales-analytics-JE">
-        <h2 class="h2-JE">Sales Analytics</h2>
-
-
-        <div class="item-JE online-JE">
-          <div class="icon-JE">
-            <span class="material-icons-sharp">shopping_cart</span>
-          </div>
-          <div class="right-JE">
-            <div class="info-JE">
-              <h3 class="h3-JE">ONLINE ORDERS</h3>
-              <small class="small-JE text-muted-JE">Last 24 Hours</small>
-            </div>
-            <h5 class="h5-JE exito-JE">+39%</h5>
-            <h3 class="h3-JE">3849</h3>
-          </div>
-        </div>
-
-
-        <div class="item-JE offline-JE">
-          <div class="icon-JE">
-            <span class="material-icons-sharp">local_mall</span>
-          </div>
-          <div class="right-JE">
-            <div class="info-JE">
-              <h3 class="h3-JE">OFFLINE ORDERS</h3>
-              <small class="small-JE text-muted-JE">Last 24 Hours</small>
-            </div>
-            <h5 class="h5-JE peligro-JE">-17%</h5>
-            <h3 class="h3-JE">1100</h3>
-          </div>
-        </div>
-
-
-        <div class="item-JE customers-JE">
-          <div class="icon-JE">
-            <span class="material-icons-sharp">person</span>
-          </div>
-          <div class="right-JE">
-            <div class="info-JE">
-              <h3 class="h3-JE">NEW CUSTOMERS</h3>
-              <small class="small-JE text-muted-JE">Last 24 Hours</small>
-            </div>
-            <h5 class="h5-JE exito-JE">+25%</h5>
-            <h3 class="h3-JE">849</h3>
-          </div>
-        </div>
-
-        <div class="item-JE add-product-JE">
-          <div>
-            <span class="material-icons-sharp">add</span>
-            <h3 class="h3-JE">Add Product</h3>
-          </div>
-        </div>
-
       </div>
-
-      <!-- FIN DE LOS ULTIMOS PEDIDOS REALIZADOS -->
 
     </div>
 
-    <!-- FIN DEL CONTENIDO DE LA DERECHA -->
+  <div class="modal-JE" id="confirmModal">
+    <div class="modal-content-JE">
+      <div class="modal-header-JE">
+        <h3 class="h3-JE" id="modalTitle">Confirmar Acción</h3>
+        <span class="modal-close-JE" id="modalClose">
+          <span class="material-icons-sharp">close</span>
+        </span>
+      </div>
+      <div class="modal-body-JE">
+        <p class="p-JE" id="modalMessage">¿Estás seguro de que deseas realizar esta acción?</p>
+      </div>
+      <div class="modal-footer-JE">
+        <button class="btn-secondary-JE" id="modalCancel">Cancelar</button>
+        <button class="btn-danger-JE" id="modalConfirm">Confirmar</button>
+      </div>
+    </div>
   </div>
+
+  <script src="./js/pedidos.js"></script>
 
 </body>
 
