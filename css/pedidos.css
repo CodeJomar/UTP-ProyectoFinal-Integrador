@@ -1188,6 +1188,16 @@
   animation-delay: 0.4s;
 }
 
+ .label-producto-JE {
+  display: inline-block;
+  margin-bottom: 6px; /* Espacio entre label e input */
+}
+
+.grupo-producto-JE {
+  margin-bottom: 18px; /* Espacio entre grupos como 'Cantidad' y 'Precio Unitario' */
+}
+
+
 /* Animación para mostrar el menú en móviles */
 @keyframes showMenuJE {
   to {

@@ -359,19 +359,19 @@
 
                 <div class="form-row-JE">
                   <div class="form-group-JE">
-                    <label for="orderId">ID del Pedido *</label>
+                    <label for="orderId">Nombre</label>
                     <input type="text" id="orderId" name="orderId" required>
                   </div>
 
                   <div class="form-group-JE">
-                    <label for="orderDate">Fecha del Pedido *</label>
+                    <label for="orderDate">Fecha del pedido *</label>
                     <input type="date" id="orderDate" name="orderDate" required>
                   </div>
                 </div>
 
                 <div class="form-row-JE">
                   <div class="form-group-JE">
-                    <label for="customerName">Nombre del Cliente *</label>
+                    <label for="customerName">Celular</label>
                     <input type="text" id="customerName" name="customerName" required>
                   </div>
 
@@ -386,38 +386,38 @@
                   <textarea id="shippingAddress" name="shippingAddress" rows="3"></textarea>
                 </div>
               </div>
-
               <div class="form-section-JE">
-                <h3 class="h3-JE">Detalles de los Productos</h3>
-                <div id="productItemsContainer">
-                  <div class="product-item-JE">
-                    <div class="form-group-JE">
-                      <label for="productSelect1">Producto *</label>
-                      <select id="productSelect1" name="product" required>
-                        <option value="">Seleccionar producto</option>
-                        <option value="smartphone">Smartphone Galaxy Pro</option>
-                        <option value="laptop">Laptop Gaming X1</option>
-                        <option value="headphones">Auriculares Inalámbricos</option>
-                      </select>
-                    </div>
-                    <div class="form-group-JE">
-                      <label for="quantity1">Cantidad *</label>
-                      <input type="number" id="quantity1" name="quantity" min="1" value="1" required>
-                    </div>
-                    <div class="form-group-JE">
-                      <label for="itemPrice1">Precio Unitario *</label>
-                      <div class="input-with-icon-JE">
-                        <span class="material-icons-sharp">attach_money</span>
-                        <input type="number" id="itemPrice1" name="itemPrice" step="0.01" required>
-                      </div>
-                    </div>
-                    <button type="button" class="btn-danger-JE remove-item-JE"><span class="material-icons-sharp">remove</span></button>
-                  </div>
-                </div>
-                <button type="button" class="btn-secondary-JE" id="addProductItem">
-                  <span class="material-icons-sharp">add</span> Agregar Producto
-                </button>
+          <h3 class="h3-JE">Detalles de los Productos</h3>
+             <div id="productItemsContainer">
+           <div class="product-item-JE">
+
+               <div class="form-group-JE grupo-producto-JE">
+             <label for="productSelect1" class="label-producto-JE">Producto *</label>
+              <select id="productSelect1" name="product" required>
+               <option value="">Seleccionar producto</option>
+             <option value="smartphone">Smartphone Galaxy Pro</option>
+            <option value="laptop">Laptop Gaming X1</option>
+                <option value="headphones">Auriculares Inalámbricos</option>
+             </select>
+            </div>
+
+               <div class="form-group-JE grupo-producto-JE">
+               <label for="quantity1" class="label-producto-JE">Cantidad *</label>
+              <input type="number" id="quantity1" name="quantity" min="1" value="1" required>
               </div>
+
+               <div class="form-group-JE grupo-producto-JE">
+               <label for="itemPrice1" class="label-producto-JE">Precio Unitario *</label>
+              <div class="input-with-icon-JE">
+            <span class="material-icons-sharp">attach_money</span>
+            <input type="number" id="itemPrice1" name="itemPrice" step="0.01" required>
+             </div>
+             </div>
+
+                </div>
+            </div>
+           </div>
+
 
               <div class="form-section-JE">
                 <h3 class="h3-JE">Pago y Estado</h3>
